@@ -1,0 +1,468 @@
+/* CUSTOM FONT */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');/* GENERAL */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1,
+h2,
+h5,
+p {
+  margin: 0;
+}
+
+.icon {
+  height: 2rem;
+  width: 2rem;
+  margin: 0 0.5rem;
+}
+
+/* HERO */
+
+#hero {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#hero__animation {
+  animation-name: hover;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  height: 25rem;
+  width: 25rem;
+  max-height: 100vh;
+  max-width: 100vw;
+}
+
+#hero__animation__img {
+  background-image: var(--tl-1);
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+/* GRID COMMON STYLES */
+
+#grid {
+  position: absolute;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+#grid__tl__btn,
+#grid__tr__btn,
+#grid__bl__btn,
+#grid__br__btn {
+  height: 18.75rem;
+  width: 18.75rem;
+  background: var(--bg);
+  color: var(--text);
+  border: var(--border);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 800;
+  font-size: 1.5rem;
+  z-index: 100;
+  border-radius: 40%;
+  transition: transform 0.2s ease-in-out;
+}
+
+#grid__tl__content,
+#grid__tr__content,
+#grid__bl__content,
+#grid__br__content {
+  position: absolute;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  color: var(--text-alt);
+}
+
+#grid__tl__btn,
+#grid__tr__btn {
+  padding-bottom: 0.5rem;
+  align-items: flex-end;
+}
+
+#grid__bl__btn,
+#grid__br__btn {
+  padding-top: 0.5rem;
+}
+
+#grid__tl__btn:active,
+#grid__br__btn:active {
+  transform: rotate(-45deg) scale(1.05);
+}
+
+#grid__tr__btn:active,
+#grid__bl__btn:active {
+  transform: rotate(45deg) scale(1.05);
+}
+
+/* TOP LEFT CORNER */
+
+/* Ensure the button retains its animation */
+#grid__tl__btn {
+top: -11.5rem;
+  left: -11.5rem;
+  transform: rotate(-45deg);
+  }
+  
+  #grid__tl__content {
+    width: 30vw;
+    top: 10vh;
+    left: 0;
+    transform: translateX(-100vw) translateY(-100vh);
+  }
+  
+  article {
+    background: #94997f71;
+    font-size: 0.3rem;
+    list-style: none;
+    border: 1px solid #191717;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    width: 10rem;
+    min-width: 10rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0.1, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  article h2 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  article p {
+    font-size: 0.7rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  article h2,
+  article p {
+    color: #444;
+    
+  }
+  
+  .cards {
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    
+  }
+  
+  .cards__content {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    
+  }
+  
+  .cards__content__text {
+    color: #2d2d2d; 
+    text-align: left; /* Align text for a more polished appearance */
+    font-size: 0.8rem; /* Slightly increase font size for readability */
+    line-height: 1.6; /* Provide comfortable spacing between lines */
+    font-family: 'Poppins', 'Arial', sans-serif; /* Use modern and legible fonts */
+    margin: 1rem 0; /* Add spacing above and below the text */
+    word-spacing: 0.005em; /* Improve the separation between words */
+    letter-spacing: 0.0015em; /* Slightly enhance spacing between letters */
+    max-width: 600px; /* Restrict the width for optimal readability */
+  }
+  
+  .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-bottom: 0.2rem;
+  }
+  .icon2 {
+    width: 2.5rem;
+    height: 2rem;
+    margin-bottom: 0.2rem;
+  }
+  
+  .write-on-text {
+    font-size: 1.5rem; /* Increase font size */
+    font-weight: bold; /* Optional: Makes the text bold */
+  }
+  
+  .write-on-text span {
+    font-size: 1.5rem; /* Ensures the 'I write on' text is also bigger */
+    font-weight: normal; /* Keeps the span text not bold */
+  }
+  
+  .write-on-text a {
+    font-size: 1.5rem; /* Ensures the link text is bigger as well */
+    text-decoration: none; /* Optional: Remove underline */
+  } 
+  
+
+/* Top Right Corner Button */
+#grid__tr__btn {
+    top: -11.5rem;
+    right: -11.5rem;
+    transform: rotate(45deg);
+  }
+  
+  #grid__tr__content {
+    width: 30vw;
+    top: 10vh;
+    right: 0;
+    transform: translateX(100vw) translateY(-100vh);
+  }
+  
+  /* Grid Content */
+  #grid__tr__content {
+    position: absolute;
+    width: 35vw;
+    top: 15vh;
+    right: 2rem;
+    transform: translateX(100vw) translateY(-100vh);
+    transition: transform 0.5s ease;
+    padding: 1rem;
+  }
+  
+  #grid__tr__content:hover {
+    transform: translateX(0) translateY(0); /* Add hover transition for sliding effect */
+  }
+  
+  /* Experience Cards */
+  .experience {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  /* Skill Cards */
+  .experience__skill {
+    background-color:#94997f71;
+    text-align: center;
+    padding: 1rem 1.5rem;
+    border: 1px solid #191717;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0.1, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  
+  .experience__skill:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+  }
+  
+  .experience__skill h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #2d2d2d;
+    font-family: 'Poppins', sans-serif; 
+  }
+  
+  /* Logo Grid */
+  .logo-grid {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  /* Circular Logo Wrappers */
+  .logo-wrapper {
+    width: 60px;
+    height: 60px;
+    background-color: #797c69;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  
+  .logo-wrapper:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Logo Images */
+  .logo-wrapper img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    #grid__tr__content {
+      width: 90%;
+    }
+  
+    .experience__skill {
+      width: 100%;
+    }
+  
+    .logo-wrapper {
+      width: 60px;
+      height: 60px;
+    }
+  
+    .logo-wrapper img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+/* BOTTOM LEFT CORNER */
+
+
+#grid__bl__btn {
+  bottom: -11.5rem;
+  left: -11.5rem;
+  transform: rotate(45deg);
+}
+
+#grid__bl__content {
+  width: 15rem;
+  bottom: 15vh;
+  left: 0;
+  transform: translateX(-100vw) translateY(100vh);
+}
+
+.project {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 2rem;
+  overflow: hidden;
+  margin: auto auto 0.5rem;
+  border: var(--border);
+  background: var(--bg-alt);
+}
+
+.project__img {
+  width: 100%;
+}
+
+.project__title {
+  width: 100%;
+  margin: 0;
+  padding: 0.3rem 0;
+  font-size: 1rem;
+}
+
+button {
+  background: var(--btn);
+  color: var(--btn-text);
+  border: none;
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
+.btn {
+  border-radius: 0;
+  height: 3rem;
+  flex-basis: 50%;
+  font-weight: 600;
+}
+
+.arrow {
+  border: var(--border);
+  width: 3rem;
+  height: 2rem;
+  margin: 0;
+  padding: 0.2rem 0;
+}
+
+.btn,
+.arrow {
+  background: rgb(245, 245, 245);
+  color: #333;
+  transition: all 300ms ease;
+}
+
+.btn:active,
+.arrow:active {
+  background: var(--bg-alt);
+  color: white;
+  cursor: pointer;
+}
+
+.btn:hover,
+.arrow:hover {
+  cursor: pointer;
+}
+
+/* BOTTOM RIGHT CORNER */
+
+#grid__br__btn {
+  bottom: -11.5rem;
+  right: -11.5rem;
+  transform: rotate(-45deg);
+}
+
+#grid__br__content {
+  bottom: 0;
+  right: 0vw;
+  transform: translateX(100vw) translateY(100vh);
+}
+
+#grid__br__content div {
+
+  display: flex;
+  margin: 0.5rem auto;
+  gap: 1.2rem;
+  width: 17rem;
+}
+.im1{
+    height: 35px;
+    width: 35px;
+
+}
+.contact-text {
+    color: var(--text);
+    transition: color 0.3s ease-in-out;
+  }
+  /* Button Styles */
+.btn-contact {
+    background-color: #94997f71;
+    border: var(--border);
+    border-radius: 5rem;
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+    color: var(--text);
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  }
+  
+.btn-contact:hover {
+    background-color: #737a60; /* Darker shade for hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+    color: var(--primary-text); /* Optional: Change text color on hover */
+  }
