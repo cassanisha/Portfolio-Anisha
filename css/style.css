@@ -398,9 +398,5 @@ button {
   }
 
   body, html {
-    margin: 0;
-    padding: 0;
-    overflow: hidden; /* Prevent scrolling */
-    width: 100vw;     /* Make it take the full width of the viewport */
-    height: 100vh;    /* Make it take the full height of the viewport */
+    overflow: hidden; /* Prevent scrolling */    /* Make it take the full height of the viewport */
 }
