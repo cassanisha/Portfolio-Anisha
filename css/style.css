@@ -147,10 +147,6 @@ top: -11.5rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
-  article:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-  }
   
   article h2 {
     font-size: 1.1rem;
@@ -193,34 +189,8 @@ top: -11.5rem;
     margin: 1rem 0; /* Add spacing above and below the text */
     word-spacing: 0.005em; /* Improve the separation between words */
     letter-spacing: 0.0015em; /* Slightly enhance spacing between letters */
-    max-width: 600px; /* Restrict the width for optimal readability */
+    max-width: 600vh; /* Restrict the width for optimal readability */
   }
-  
-  .icon {
-    width: 1.5rem;
-    height: 1.5rem;
-    margin-bottom: 0.2rem;
-  }
-  .icon2 {
-    width: 2.5rem;
-    height: 2rem;
-    margin-bottom: 0.2rem;
-  }
-  
-  .write-on-text {
-    font-size: 1.5rem; /* Increase font size */
-    font-weight: bold; /* Optional: Makes the text bold */
-  }
-  
-  .write-on-text span {
-    font-size: 1.5rem; /* Ensures the 'I write on' text is also bigger */
-    font-weight: normal; /* Keeps the span text not bold */
-  }
-  
-  .write-on-text a {
-    font-size: 1.5rem; /* Ensures the link text is bigger as well */
-    text-decoration: none; /* Optional: Remove underline */
-  } 
   
 
 /* Top Right Corner Button */
@@ -235,21 +205,6 @@ top: -11.5rem;
     top: 10vh;
     right: 0;
     transform: translateX(100vw) translateY(-100vh);
-  }
-  
-  /* Grid Content */
-  #grid__tr__content {
-    position: absolute;
-    width: 35vw;
-    top: 15vh;
-    right: 2rem;
-    transform: translateX(100vw) translateY(-100vh);
-    transition: transform 0.5s ease;
-    padding: 1rem;
-  }
-  
-  #grid__tr__content:hover {
-    transform: translateX(0) translateY(0); /* Add hover transition for sliding effect */
   }
   
   /* Experience Cards */
@@ -271,10 +226,7 @@ top: -11.5rem;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
   }
   
-  .experience__skill:hover {
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-    transform: translateY(-5px);
-  }
+ 
   
   .experience__skill h2 {
     font-size: 1.2rem;
@@ -317,30 +269,8 @@ top: -11.5rem;
     object-fit: contain;
   }
   
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    #grid__tr__content {
-      width: 90%;
-    }
-  
-    .experience__skill {
-      width: 100%;
-    }
-  
-    .logo-wrapper {
-      width: 60px;
-      height: 60px;
-    }
-  
-    .logo-wrapper img {
-      width: 40px;
-      height: 40px;
-    }
-  }
 
 /* BOTTOM LEFT CORNER */
-
-
 #grid__bl__btn {
   bottom: -11.5rem;
   left: -11.5rem;
@@ -431,6 +361,11 @@ button {
   right: 0vw;
   transform: translateX(100vw) translateY(100vh);
 }
+.im1{
+  height:1.9rem;
+  width: 1.9rem;
+
+}
 
 #grid__br__content div {
 
@@ -438,11 +373,6 @@ button {
   margin: 0.5rem auto;
   gap: 1.2rem;
   width: 17rem;
-}
-.im1{
-    height: 35px;
-    width: 35px;
-
 }
 .contact-text {
     color: var(--text);
@@ -466,3 +396,11 @@ button {
     transform: scale(1.05); /* Slightly enlarge the button on hover */
     color: var(--primary-text); /* Optional: Change text color on hover */
   }
+
+  body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrolling */
+    width: 100vw;     /* Make it take the full width of the viewport */
+    height: 100vh;    /* Make it take the full height of the viewport */
+}
