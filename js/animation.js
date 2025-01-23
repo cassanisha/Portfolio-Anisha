@@ -183,8 +183,19 @@ function handleWindowResize() {
       break;
 
     default:
+      resetAllCorners();
+
   }
 }
+function resetAllCorners() {
+  [tlContent, trContent, blContent, brContent].forEach((content) => {
+    content.style.transform = "translateX(0) translateY(0)";
+    content.style.width = "0";
+    content.style.height = "0";
+    content.style.zIndex = "1";
+    content.style.display = "none";
+  });
+} 
 
 // Store last reverse animation, ready to be played
 let lastReverseAnimation = "";
@@ -217,22 +228,47 @@ function playClosingAnimation(reverseAnimation) {
     case "top-left":
       tlBtn.style.background = bgColor;
       tlBtn.style.color = textColor;
+      ///////
       tlContent.style.transform = tlHidden;
+      tlContent.style.width = "0";
+      tlContent.style.height = "0";
+      tlContent.style.zIndex = "1";
+      tlContent.style.display = "none"; 
+      ////////
+      
       break;
     case "top-right":
       trBtn.style.background = bgColor;
       trBtn.style.color = textColor;
-      trContent.style.transform = trHidden;
+      //////
+      trContent.style.transform = tlHidden;
+      trContent.style.width = "0";
+      trContent.style.height = "0";
+      trContent.style.zIndex = "1";
+      trContent.style.display = "none"; 
+      ////////
       break;
     case "bottom-left":
       blBtn.style.background = bgColor;
       blBtn.style.color = textColor;
-      blContent.style.transform = blHidden;
+      //////
+      blContent.style.transform = tlHidden;
+      blContent.style.width = "0";
+      blContent.style.height = "0";
+      blContent.style.zIndex = "1";
+      blContent.style.display = "none"; 
+      ////////
       break;
     case "bottom-right":
       brBtn.style.background = bgColor;
       brBtn.style.color = textColor;
-      brContent.style.transform = brHidden;
+      //////
+      brContent.style.transform = tlHidden;
+      brContent.style.width = "0";
+      brContent.style.height = "0";
+      brContent.style.zIndex = "1";
+      brContent.style.display = "none"; 
+      ////////
       break;
 
     default:

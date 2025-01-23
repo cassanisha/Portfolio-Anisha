@@ -121,17 +121,17 @@ p {
 
 /* Ensure the button retains its animation */
 #grid__tl__btn {
-top: -11.5rem;
+  top: -11.5rem;
   left: -11.5rem;
   transform: rotate(-45deg);
   }
   
-  #grid__tl__content {
+#grid__tl__content {
     width: 30vw;
     top: 10vh;
     left: 0;
     transform: translateX(-100vw) translateY(-100vh);
-  }
+}
   
   article {
     background: #94997f71;
