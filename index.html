@@ -6,15 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>cassanisha</title>
     <!-- <link rel="stylesheet" href="./css/animation-classes.css" /> -->
-    <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.png" />
     <script src="./js/animation.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.1/lottie.min.js"></script>
     <script src="./js/color-mode.js" defer></script>
     <script src="./js/project-slideshow.js" defer></script>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/animation.css" />
     <link rel="stylesheet" href="./css/color-mode.css" />
+    
   </head>
   <body>
+    
     <div id="hero">
       <h5>Hello I'm</h5>
       <h1>Anisha Dhillon</h1>
@@ -25,6 +28,10 @@
       </div>
     </div>
     <nav id="grid">
+      <a href="https://drive.google.com/uc?export=download&id=1r1vvM82jMPzfuxwQDAGSSzLpl0RUzP_j" class="download-button" target="_blank">
+        <div class="animation-container" id="downloadAnimation"></div>
+        Download CV
+      </a>
         <div id="grid__tl">
           <div id="grid__tl__btn">Education</div>
           <div id="grid__tl__content">
@@ -153,8 +160,8 @@
       <div id="grid__bl">
         <div id="grid__bl__btn">Projects</div>
         <div id="grid__bl__content">
-          <div id=" "></div>
-            <div class="project">
+          <div id="grid__bl__content__projects ">
+            <div class="project p-1">
               <img
                 class="project__img project-1"
                 src="assets/portfolio-projects/project-1-dark.png"
@@ -219,7 +226,7 @@
               &#10094;
             </button>
             <button class="arrow" onclick="navigateProject(1)">&#10095;</button>
-          
+          </div>
         </div>
       </div>
       <div id="grid__br">
@@ -228,37 +235,19 @@
           <h5 class="contact-text">Get In Touch</h5>
           <h2 class="contact-text">Contact Me</h2>
           <div>
-            <button
-              class="btn btn-contact"
-              onclick="window.location.href='mailto:anisadhillon03@gmail.com'"
-            >
             
-            <img class="im1"
-            src="./assets/icons/gmail-logo.png"
-            alt="html icon"
-            class="icon"
-            />
+           <button class="btn btn-contact" onclick="window.location.href='mailto:anisadhillon03@gmail.com'">
+              <img class="im1 icon" src="./assets/icons/gmail-logo.png" alt="Gmail logo" />
             </button>
-            <button
-              class="btn btn-contact"
-              onclick="window.location.href='mailto:anisadhillon03@gmail.com'"
-            >
-            <img class="im1"
-            src="./assets/icons/linkedin-logo.png"
-            alt="html icon"
-            class="icon"
-            />
+
+            <button class="btn btn-contact" onclick="window.location.href='https://www.linkedin.com/in/cassanisha/'">
+            <img class="im1"src="./assets/icons/linkedin-logo.png"alt="html icon"class="icon"/>
             </button>
-            <button
-              class="btn btn-contact"
-              onclick="window.location.href='https://www.linkedin.com'"
-            >
-            <img class="im1"
-            src="./assets/icons/github-logo.png"
-            alt="html icon"
-            class="icon"
-            />
+
+            <button class="btn btn-contact" onclick="window.location.href='https://github.com/cassanisha'" >
+            <img class="im1" src="./assets/icons/github-logo.png" alt="html icon" class="icon" />
             </button>
+            
           </div>
         </div>
       </div>
@@ -266,5 +255,14 @@
     <div id="color-mode">
       <div id="toggle-button" class="icon"></div>
     </div>
+    <script>
+      lottie.loadAnimation({
+      container: document.getElementById('downloadAnimation'), 
+      renderer: 'svg', 
+      loop: true, 
+      autoplay: true, 
+      path: './assets/download_cv_animation.json' 
+    });
+    </script>
   </body>
 </html>

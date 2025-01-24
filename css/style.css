@@ -33,6 +33,12 @@ p {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  display: flex;
+  flex-direction: column;  /* Stack elements vertically */
+  align-items: center;     /* Center the content horizontally */
+  justify-content: center;
+  height: 100vh;           /* Take up full viewport height */
+  text-align: center;
 }
 
 #hero__animation {
@@ -90,6 +96,7 @@ p {
 #grid__tr__content,
 #grid__bl__content,
 #grid__br__content {
+  background-color: red ;
   position: absolute;
   text-align: center;
   transition: transform 0.3s ease-in-out;
@@ -182,14 +189,14 @@ p {
   
   .cards__content__text {
     color: #2d2d2d; 
-    text-align: left; /* Align text for a more polished appearance */
-    font-size: 0.8rem; /* Slightly increase font size for readability */
-    line-height: 1.6; /* Provide comfortable spacing between lines */
-    font-family: 'Poppins', 'Arial', sans-serif; /* Use modern and legible fonts */
-    margin: 1rem 0; /* Add spacing above and below the text */
-    word-spacing: 0.005em; /* Improve the separation between words */
-    letter-spacing: 0.0015em; /* Slightly enhance spacing between letters */
-    max-width: 600vh; /* Restrict the width for optimal readability */
+    text-align: left; 
+    font-size: 0.8rem; 
+    line-height: 1.6; 
+    font-family: 'Poppins', 'Arial', sans-serif; 
+    margin: 1rem 0; 
+    word-spacing: 0.005em;
+    letter-spacing: 0.0015em; 
+    max-width: 600vh; 
   }
   
 
@@ -285,6 +292,7 @@ p {
 }
 
 .project {
+  border-width: 10px;
   width: 70%;
   display: flex;
   flex-wrap: wrap;
@@ -293,6 +301,7 @@ p {
   margin: auto auto 0.5rem;
   border: var(--border);
   background: var(--bg-alt);
+  border: 1px solid #191717;
 }
 
 .project__img {
@@ -312,6 +321,8 @@ button {
   border: none;
   border-radius: 1rem;
   padding: 0.5rem;
+  background-color:#797c697b;
+  
 }
 
 .btn {
@@ -319,6 +330,8 @@ button {
   height: 3rem;
   flex-basis: 50%;
   font-weight: 600;
+  
+  
 }
 
 .arrow {
@@ -327,12 +340,12 @@ button {
   height: 2rem;
   margin: 0;
   padding: 0.2rem 0;
+  border: 0.9px solid #191717;
 }
 
 .btn,
 .arrow {
-  background: rgb(245, 245, 245);
-  color: #333;
+  background-color:#797c697b;
   transition: all 300ms ease;
 }
 
@@ -381,7 +394,7 @@ button {
   /* Button Styles */
 .btn-contact {
     background-color: #94997f71;
-    border: var(--border);
+    border: 1px solid #191717;
     border-radius: 5rem;
     padding: 0.5rem 1.2rem;
     font-size: 1rem;
@@ -389,14 +402,73 @@ button {
     text-align: center;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+      pointer-events: all; /* Ensures button is clickable */
   }
   
 .btn-contact:hover {
-    background-color: #737a60; /* Darker shade for hover */
-    transform: scale(1.05); /* Slightly enlarge the button on hover */
-    color: var(--primary-text); /* Optional: Change text color on hover */
+    background-color: #737a60; 
+    transform: scale(1.05); 
+    color: var(--primary-text);
   }
+/*buttons download cv, hasnode */
+.download-button {
+  height: 3rem;
+  width: 12rem;
+  position: relative;
+  margin-top:79vh;   
+  margin-left:79vh;       /* Adds space between the hero section and the button */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 0px;
+  font-size: 16px;
+  background-color: none;
+  color: black;
+  border: 2px solid black; 
+  border-radius: 20px; 
+  cursor: pointer;
+  text-decoration: none;
+  overflow: hidden;
+  box-shadow: 3px 3px 0px black;
+  font-family: 'Poppins', 'Chalkboard', sans-serif; 
+  transition: transform 0.3s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+}
+
+.download-button:hover {
+  transform: scale(1.1); 
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.animation-container {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border: 2px solid black;
+  border-radius: 50%;
+  box-shadow: 2px 2px 0px black;
+  background-color: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: spin 1.5s linear infinite;
+}
+
+.animation-container img {
+  width: 20px;
+  height: 20px;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
 
   body, html {
-    overflow: hidden; /* Prevent scrolling */    /* Make it take the full height of the viewport */
+    overflow: hidden;
 }

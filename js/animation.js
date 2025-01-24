@@ -15,6 +15,7 @@ const tlContent = document.querySelector("#grid__tl__content");
 const trContent = document.querySelector("#grid__tr__content");
 const blContent = document.querySelector("#grid__bl__content");
 const brContent = document.querySelector("#grid__br__content");
+const expskill = document.querySelector(".experience__skill");
 
 const projectOne = document.querySelector(".p-1");
 const projectTwo = document.querySelector(".p-2");
@@ -57,12 +58,14 @@ function handleWindowResize() {
         tlContent.style.display = "flex";
         tlContent.style.alignItems = "center";
         tlContent.style.justifyContent = "center";
-        tlContent.style.background = "var(--bg-transparent)";
+        tlContent.style.backgroundColor = "rgba(245, 245, 220, 0.9)"; 
         tlContent.style.zIndex = "200";
         tlBtn.style.zIndex = "300";
         trBtn.style.zIndex = "100";
         blBtn.style.zIndex = "100";
         brBtn.style.zIndex = "100";
+        //
+        
       } else {
         tlActive = "translateX(5vw) translateY(0)";
         tlContent.style.transform = "translateX(5vw) translateY(0)";
@@ -83,7 +86,7 @@ function handleWindowResize() {
         trContent.style.display = "flex";
         trContent.style.alignItems = "center";
         trContent.style.justifyContent = "center";
-        trContent.style.background = "var(--bg-transparent)";
+        trContent.style.backgroundColor = "rgba(245, 245, 220, 0.9)"; 
         trContent.style.zIndex = "200";
         trBtn.style.zIndex = "300";
         tlBtn.style.zIndex = "100";
@@ -109,7 +112,7 @@ function handleWindowResize() {
         blContent.style.display = "flex";
         blContent.style.alignItems = "center";
         blContent.style.justifyContent = "center";
-        blContent.style.background = "var(--bg-transparent)";
+        blContent.style.backgroundColor = "rgba(245, 245, 220, 0.9)"; 
         blContent.style.zIndex = "200";
         trBtn.style.zIndex = "100";
         tlBtn.style.zIndex = "100";
@@ -130,7 +133,7 @@ function handleWindowResize() {
         blContent.style.display = "flex";
         blContent.style.alignItems = "center";
         blContent.style.justifyContent = "center";
-        blContent.style.background = "var(--bg-transparent)";
+        blContent.style.backgroundColor = "rgba(245, 245, 220, 0.9)"; 
         blContent.style.zIndex = "200";
         trBtn.style.zIndex = "100";
         tlBtn.style.zIndex = "100";
@@ -143,7 +146,7 @@ function handleWindowResize() {
         projectThree.style.width = "40%";
         projectThree.style.margin = "auto auto 0.5rem";
       } else {
-        blActive = "translateX(10vw) translateY(7vh)";
+        blActive = "translateX(10vw) translateY(-3vh)";
         blContent.style.transform = "translateX(10vw) translateY(7vh)";
         blContent.style.width = "15rem";
         blContent.style.height = "0";
@@ -166,7 +169,7 @@ function handleWindowResize() {
         brContent.style.flexDirection = "column";
         brContent.style.alignItems = "center";
         brContent.style.justifyContent = "center";
-        brContent.style.background = "var(--bg-transparent)";
+        brContent.style.backgroundColor = "rgba(245, 245, 220, 0.9)"; 
         brContent.style.zIndex = "200";
         trBtn.style.zIndex = "100";
         tlBtn.style.zIndex = "100";

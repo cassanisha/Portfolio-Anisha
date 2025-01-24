@@ -138,6 +138,22 @@ body:after {
     color:#1f1f1c; 
     border:#333;   
   }
+  /* Default Light Mode Styles */
+.download-button {
+  background-color: none;
+  color: white;
+  border: 2px solid white; /* Hand-drawn style border */
+  box-shadow: 3px 3px 0px rgb(255, 255, 255); /* Adds a shadow for depth */
+}
+
+.animation-container {
+
+  border: 2px solid rgb(255, 255, 255);
+
+  box-shadow: 2px 2px 0px rgb(255, 255, 255);
+ 
+}
+
 
   }
   
