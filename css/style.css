@@ -414,9 +414,11 @@ button {
 .download-button {
   height: 3rem;
   width: 12rem;
-  position: relative;
-  margin-top:79vh;   
-  margin-left:79vh;       /* Adds space between the hero section and the button */
+  position: absolute;
+  top: 83%;
+  left: 49%;
+  transform: translate(-50%, -50%);
+ 
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -466,8 +468,7 @@ button {
     transform: rotate(360deg);
   }
 }
-
-
+  
 
   body, html {
     overflow: hidden;
