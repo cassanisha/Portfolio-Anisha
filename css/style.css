@@ -222,17 +222,26 @@ p {
     justify-content: center;
   }
   
+  
   /* Skill Cards */
   .experience__skill {
     background-color:#94997f71;
     text-align: center;
-    padding: 1rem 1.5rem;
+    padding: 0.9rem 1.5rem;
     border: 1px solid #191717;
     border-radius: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0.1, 0.1);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
   }
   
+@media (max-width: 768px) {
+    .experience__skill {
+        transform: scale(0.8);
+        padding: 0.7rem 1rem; /* Reduce padding */
+        font-size: 0.9rem;   /* Reduce font size */
+        border-radius: 0.8rem; /* Slightly smaller border-radius */
+    }
+}
  
   
   .experience__skill h2 {
